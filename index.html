@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KemProMed - Ecosistema de Salud e Inteligencia Clínica</title>
+    <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -13,7 +13,8 @@
             --text-secondary: #8b949e;
             --accent-cyan: #00d2ff;
             --accent-blue: #0072ff;
-            --accent-green: #2ea043;
+            --accent-purple: #7928ca;
+            --accent-clip: #ff5000;
         }
 
         * {
@@ -35,17 +36,26 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             width: 100%;
         }
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+        }
+
+        .doctor-title {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 5px;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -54,7 +64,18 @@
 
         header p {
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .grid {
@@ -67,7 +88,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 24px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -80,30 +101,31 @@
         }
 
         .card-title {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             color: var(--text-primary);
             margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
         }
 
         .card-description {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 20px;
             flex-grow: 1;
         }
 
         .btn {
-            display: inline-block;
+            display: block;
+            width: 100%;
             text-align: center;
-            padding: 12px 20px;
+            padding: 12px 16px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
-            transition: background 0.2s ease;
+            transition: opacity 0.2s ease;
         }
 
         .btn-primary {
@@ -111,8 +133,9 @@
             color: #ffffff;
         }
 
-        .btn-primary:hover {
-            opacity: 0.9;
+        .btn-clip {
+            background: linear-gradient(135deg, var(--accent-clip), #ff0055);
+            color: #ffffff;
         }
 
         .btn-secondary {
@@ -121,18 +144,18 @@
             border: 1px solid var(--border-color);
         }
 
-        .btn-secondary:hover {
-            background-color: #30363d;
+        .btn:hover {
+            opacity: 0.9;
         }
 
         .badge {
-            display: inline-block;
             padding: 2px 8px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             border-radius: 12px;
             background-color: rgba(46, 160, 67, 0.2);
             color: #3fb950;
             border: 1px solid rgba(46, 160, 67, 0.4);
+            font-weight: bold;
         }
 
         footer {
@@ -147,20 +170,40 @@
 
     <div class="container">
         <header>
-            <h1>KemProMed Ecosystem</h1>
-            <p>Plataforma Integral de Servicios Médicos e Inteligencia Clínica</p>
+            <div class="doctor-title">Dr. Mauro Ernesto Falcón Muñoz</div>
+            <h1>KemProMed - Tech Licensing & Ecosystem Hub</h1>
+            <p>Infraestructura central de desarrollo, licenciamiento de motores de decisión, red criptográfica B2B y servicios distribuidos.</p>
         </header>
 
+        <!-- Motores y Nodos Tecnológicos -->
+        <div class="section-title">⚡ Motores Tecnológicos Principales</div>
         <main class="grid">
-            <!-- Nexus Clinical Node -->
+            
+            <!-- Motor K-AURA -->
             <div class="card">
                 <div>
                     <div class="card-title">
-                        <span>⚡ KemProMed Nexus</span>
-                        <span class="badge">Live</span>
+                        <span>Motor K-AURA</span>
+                        <span class="badge" style="background-color: rgba(121, 40, 202, 0.2); color: #b388ff; border-color: rgba(121, 40, 202, 0.4);">Core Engine</span>
                     </div>
                     <p class="card-description">
-                        Nodo Clínico e Inteligencia Médica (MediPulse AI). Soporte de decisiones diagnósticas, triaje y expediente NOM-004.
+                        Sistema central de procesamiento, cálculo criptográfico y licenciamiento automatizado B2B de la arquitectura KemProMed.
+                    </p>
+                </div>
+                <a href="https://kempromed.com" class="btn btn-secondary">
+                    Acceder al Motor (K-AURA) &rarr;
+                </a>
+            </div>
+
+            <!-- KemProMed Nexus -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>KemProMed Nexus</span>
+                        <span class="badge">Clinical Node</span>
+                    </div>
+                    <p class="card-description">
+                        Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.
                     </p>
                 </div>
                 <a href="https://ai.studio/apps/30730ccc-f608-415e-9079-d36afd3c417b?fullscreenApplet=true" target="_blank" rel="noopener" class="btn btn-primary">
@@ -168,54 +211,48 @@
                 </a>
             </div>
 
-            <!-- K-AURA Assistant -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>🧬 K-AURA</span>
-                    </div>
-                    <p class="card-description">
-                        Asistente especializado en investigación, revisión bibliográfica y protocolos de salud.
-                    </p>
-                </div>
-                <a href="https://kempromed.com" class="btn btn-secondary">
-                    Abrir K-AURA &rarr;
-                </a>
-            </div>
-
-            <!-- Meta AI Integration -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>💬 Meta AI Support</span>
-                    </div>
-                    <p class="card-description">
-                        Canal rápido de comunicación y asistencia automatizada mediante WhatsApp y Meta AI.
-                    </p>
-                </div>
-                <a href="https://wa.me/" target="_blank" rel="noopener" class="btn btn-secondary">
-                    Contactar por WhatsApp &rarr;
-                </a>
-            </div>
-
-            <!-- Agenda & Citas -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>📅 Agenda Médica</span>
-                    </div>
-                    <p class="card-description">
-                        Gestión de citas, horarios de atención y consultas de pacientes.
-                    </p>
-                </div>
-                <a href="https://kempromed.com" class="btn btn-secondary">
-                    Gestionar Agenda &rarr;
-                </a>
-            </div>
         </main>
 
+        <!-- Pasarelas de Pago y Licenciamiento -->
+        <div class="section-title">💳 Pasarelas de Pago y Servicios Empresariales</div>
+        <div class="grid">
+            
+            <!-- Pasarela Clip -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Pagos con Tarjeta (Clip)</span>
+                        <span class="badge" style="background-color: rgba(255, 80, 0, 0.2); color: #ff8555; border-color: rgba(255, 80, 0, 0.4);">Clip MX</span>
+                    </div>
+                    <p class="card-description">
+                        Procesa pagos seguros en moneda nacional para E-Books, consultoría empresarial, licencias K-Aura y servicios KemPro Digital Solutions.
+                    </p>
+                </div>
+                <a href="https://clip.mx/@kemprodigitalsolutions" target="_blank" rel="noopener" class="btn btn-clip">
+                    Ir al Catálogo de Pagos Clip &rarr;
+                </a>
+            </div>
+
+            <!-- Nodos Cripto B2B -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Nodos Cripto B2B</span>
+                        <span class="badge" style="background-color: rgba(0, 210, 255, 0.2); color: #00d2ff; border-color: rgba(0, 210, 255, 0.4);">Web3</span>
+                    </div>
+                    <p class="card-description">
+                        Aceptación de pagos descentralizados y licenciamiento institucional en red multimodular (BTC, ETH, USDT).
+                    </p>
+                </div>
+                <a href="https://kempromed.com" class="btn btn-secondary">
+                    Consultar Direcciones &rarr;
+                </a>
+            </div>
+
+        </div>
+
         <footer>
-            <p>&copy; 2026 KemProMed. Todos los derechos reservados.</p>
+            <p>&copy; 2026 KemPro Digital Solutions / KemProMed. Todos los derechos reservados.</p>
         </footer>
     </div>
 
