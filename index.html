@@ -3,149 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KemProMed | Ecosistema B2B HealthTech & AI</title>
+  <title>KemProMed | Plataforma Central & Ecosistema Multimodular</title>
   <style>
     :root {
-      --primary: #0A2540;
-      --secondary: #00D4B2;
-      --accent: #1A5276;
-      --bg-dark: #0F172A;
-      --bg-card: #1E293B;
-      --text-light: #F8FAFC;
-      --text-muted: #94A3B8;
-      --border: #334155;
+      --bg-dark: #070C16;
+      --bg-card: #0E1726;
+      --border: #1E293B;
+      --border-accent: #1E3A8A;
+      --primary: #3B82F6;
+      --cyan: #06B6D4;
+      --text-white: #FFFFFF;
+      --text-gray: #94A3B8;
+      --badge-bg: rgba(6, 182, 212, 0.1);
+      --badge-border: rgba(6, 182, 212, 0.3);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     body {
       background-color: var(--bg-dark);
-      color: var(--text-light);
-      line-height: 1.6;
+      color: var(--text-white);
+      line-height: 1.5;
       padding-bottom: 40px;
     }
 
-    /* ENCABEZADO PRINCIPAL CON LOGOTIPO Y DATOS DE DIRECCIÓN */
+    /* BARRA SUPERIOR Y LOGO */
     header {
-      background-color: var(--primary);
-      border-bottom: 2px solid var(--secondary);
-      padding: 20px 5%;
+      background-color: rgba(7, 12, 22, 0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
     }
 
-    .brand-container {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 14px;
     }
 
-    /* LOGOTIPO OFICIAL KEMPROMED (ISOTIPO VECTORIAL CSS) */
-    .brand-logo {
-      width: 52px;
-      height: 52px;
-      background: linear-gradient(135deg, #00D4B2 0%, #1A5276 100%);
-      border-radius: 12px;
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #2563EB, #06B6D4);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 212, 178, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .brand-logo svg {
-      width: 30px;
-      height: 30px;
-      fill: #0A2540;
-    }
-
-    .brand-title h1 {
-      font-size: 24px;
       font-weight: 800;
-      color: var(--text-light);
-      letter-spacing: 1.5px;
-      line-height: 1.1;
+      font-size: 20px;
+      color: #FFF;
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
     }
 
-    .brand-title p {
-      font-size: 12px;
-      color: var(--secondary);
-      font-weight: 600;
+    .brand-text h1 {
+      font-size: 18px;
+      font-weight: 700;
       letter-spacing: 0.5px;
+      line-height: 1.2;
     }
 
-    /* UNICA REFERENCIA AL NOMBRE DEL FUNDADOR/DIRECTOR EN CABECERA */
-    .director-meta {
-      text-align: right;
-      font-size: 13px;
-      color: var(--text-muted);
-      border-left: 2px solid var(--border);
-      padding-left: 15px;
+    .brand-text p {
+      font-size: 12px;
+      color: var(--cyan);
+      font-family: monospace;
     }
 
-    .director-meta strong {
-      color: var(--text-light);
-      display: block;
-      font-size: 14px;
-    }
-
-    .director-meta a {
-      color: var(--secondary);
+    .nav-actions a {
+      color: var(--cyan);
       text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--border-accent);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
     }
 
-    .director-meta a:hover {
-      text-decoration: underline;
+    .nav-actions a:hover {
+      background: rgba(6, 182, 212, 0.1);
+      border-color: var(--cyan);
     }
 
-    /* PRESENTACIÓN PRINCIPAL */
-    .hero {
-      padding: 40px 5% 20px;
-      text-align: center;
-      max-width: 900px;
+    /* CONTAINER Y HERO */
+    .container {
+      max-width: 1000px;
       margin: 0 auto;
+      padding: 40px 6% 20px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .pill-tag {
+      display: inline-block;
+      background-color: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
     .hero h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: var(--text-light);
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
     }
 
     .hero p {
       font-size: 15px;
-      color: var(--text-muted);
-    }
-
-    /* GRID DE MÓDULOS DE LA PLATAFORMA */
-    .container {
-      max-width: 1200px;
+      color: var(--text-gray);
+      max-width: 750px;
       margin: 0 auto;
-      padding: 20px 5%;
     }
 
     .section-title {
-      font-size: 18px;
-      border-left: 4px solid var(--secondary);
-      padding-left: 12px;
+      font-size: 22px;
+      font-weight: 700;
       margin-bottom: 25px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-light);
+      text-align: center;
+      color: var(--text-white);
     }
 
+    /* GRID DE TARJETAS ESTILO ZERO TRUST */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      margin-bottom: 40px;
     }
 
     .card {
@@ -156,185 +160,190 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
-      border-color: var(--secondary);
+      border-color: var(--primary);
+      transform: translateY(-2px);
     }
 
-    .card-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
+    .badge {
+      display: inline-block;
+      background-color: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      font-family: monospace;
+      width: fit-content;
     }
 
     .card h3 {
       font-size: 18px;
+      font-weight: 700;
       margin-bottom: 10px;
-      color: var(--text-light);
+      color: var(--text-white);
     }
 
     .card p {
       font-size: 13px;
-      color: var(--text-muted);
+      color: var(--text-gray);
       margin-bottom: 20px;
       flex-grow: 1;
     }
 
-    /* BOTONES Y ENLACES FUNCIONALES */
-    .btn {
+    .btn-link {
       display: inline-block;
+      width: 100%;
       text-align: center;
-      background-color: var(--secondary);
-      color: #0A2540;
-      font-weight: 700;
-      padding: 10px 18px;
+      background-color: rgba(37, 99, 235, 0.1);
+      border: 1px solid var(--border-accent);
+      color: var(--text-white);
+      font-weight: 600;
+      padding: 10px 16px;
       border-radius: 6px;
       text-decoration: none;
       font-size: 13px;
-      transition: background-color 0.2s ease, opacity 0.2s ease;
+      transition: all 0.2s ease;
     }
 
-    .btn:hover {
-      background-color: #00b396;
+    .btn-link:hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #FFF;
     }
 
-    .btn-outline {
-      background-color: transparent;
-      color: var(--text-light);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      background-color: var(--border);
-      border-color: var(--secondary);
-    }
-
-    /* PIE DE PÁGINA CORPORATIVO */
+    /* FOOTER CORPORATIVO CON DERECHOS RESERVADOS */
     footer {
-      background-color: #080D1A;
       border-top: 1px solid var(--border);
-      padding: 25px 5%;
-      margin-top: 50px;
+      padding: 40px 6% 20px;
       text-align: center;
       font-size: 12px;
-      color: var(--text-muted);
+      color: var(--text-gray);
+      margin-top: 60px;
     }
 
-    footer p {
-      margin-bottom: 6px;
+    .presence {
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    .presence span {
+      color: var(--text-white);
+      font-weight: 600;
+    }
+
+    .legal-owner {
+      margin-top: 15px;
+      font-size: 12px;
+    }
+
+    .legal-owner strong {
+      color: var(--text-white);
     }
 
     footer a {
-      color: var(--secondary);
+      color: var(--cyan);
       text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- ENCABEZADO CORPORATIVO CON UNICA REFERENCIA DE NOMBRE Y LOGO -->
+  <!-- BARRA SUPERIOR -->
   <header>
-    <div class="brand-container">
-      <div class="brand-logo">
-        <!-- Isotipo Med/Tech -->
-        <svg viewBox="0 0 24 24">
-          <path d="M19 10.5h-5.5V5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5.5H5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5h5.5V19c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5.5H19c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/>
-        </svg>
-      </div>
-      <div class="brand-title">
-        <h1>KEMPROMED</h1>
-        <p>KemPro Digital Solutions</p>
+    <div class="brand">
+      <div class="brand-icon">K</div>
+      <div class="brand-text">
+        <h1>KemProMed</h1>
+        <p>Plataforma Central</p>
       </div>
     </div>
-
-    <!-- Referencia única de la Dirección en la Cabecera -->
-    <div class="director-meta">
-      <strong>Dr. Mauro Ernesto Falcón Muñoz</strong>
-      <span>Director General & Fundador</span>
-      <p><a href="mailto:direccion@kempromed.com">direccion@kempromed.com</a></p>
+    <div class="nav-actions">
+      <a href="mailto:direccion@kempromed.com">direccion@kempromed.com</a>
     </div>
   </header>
 
-  <!-- PRESENTACIÓN DE LA PLATAFORMA -->
-  <section class="hero">
-    <h2>Ecosistema Tecnológico B2B HealthTech & AI</h2>
-    <p>Plataforma modular que integra decisiones clínicas automatizadas mediante Inteligencia Artificial, cumplimiento normativo estricto, educación especializada y flujos industriales.</p>
-  </section>
-
-  <!-- MÓDULOS DE SERVICIO CON LINKS TOTALMENTE FUNCIONALES -->
   <main class="container">
-    <h3 class="section-title">Módulos del Ecosistema</h3>
+    <!-- HERO PRINCIPAL -->
+    <section class="hero">
+      <div class="pill-tag">Gobernanza Strict Zero Trust & Soberanía de Código</div>
+      <h2>Ecosistema Digital Multimodular e Infraestructura Tecnológica</h2>
+      <p>Plataforma central y directriz para el desarrollo de software, licenciamiento tecnológico, microservicios asíncronos y optimización mediante soporte clínico de precisión e Inteligencia Artificial.</p>
+    </section>
+
+    <!-- MOTORES Y MÓDULOS DEL ECOSISTEMA -->
+    <h3 class="section-title">Motores Principales de Impacto</h3>
 
     <div class="grid">
-      <!-- 1. MediPulse AI / Nexus -->
+      <!-- 1. K-AURA -->
       <div class="card">
         <div>
-          <div class="card-icon">🩺</div>
-          <h3>MediPulse AI (Nodo Nexus)</h3>
-          <p>Triaje de precisión clínica, cálculo automático de NEWS2 y asistencia para la generación de notas normadas bajo la NOM-004-SSA3-2012.</p>
+          <span class="badge">SaaS / Web3 / FinTech</span>
+          <h3>1. K-AURA</h3>
+          <p>Motor inteligente central de monitorización de blockchain determinista. Diseñado bajo esquemas SaaS y B2B con lógica de ejecución automática para gestión de registros y verificación criptográfica.</p>
         </div>
-        <a href="mailto:direccion@kempromed.com?subject=Solicitud%20Acceso%20MediPulse%20AI" class="btn">Solicitar Demo MediPulse</a>
+        <a href="mailto:direccion@kempromed.com?subject=Solicitud%20K-AURA" class="btn-link">Verificar Registro ↗</a>
       </div>
 
-      <!-- 2. K-Pro-Educación (LINK FUNCIONAL DIRECTO) -->
+      <!-- 2. MediPulse / Nexus -->
       <div class="card">
         <div>
-          <div class="card-icon">🎓</div>
-          <h3>K-Pro-Educación</h3>
-          <p>Tutor interactivo para clases gratuitas de idiomas dirigidas a estudiantes, con evaluación continua y ejercicios adaptativos.</p>
+          <span class="badge">HealthTech / NOM-004</span>
+          <h3>2. KemProMed Nexus (MediPulse AI)</h3>
+          <p>Plataforma de telemedicina y expediente clínico electrónico alineada a la NOM-004 y NOM-024. Integra triaje NEWS2, análisis predictivo probabilístico y firma digital inalterable.</p>
         </div>
-        <a href="https://ai.studio/apps/0c6b80f6-0f6e-491a-bf8f-4f1db316e016" target="_blank" rel="noopener noreferrer" class="btn">Abrir K-Pro Educación ↗</a>
+        <a href="mailto:direccion@kempromed.com?subject=Solicitud%20Acceso%20MediPulse" class="btn-link">Acceder a Nexus ↗</a>
       </div>
 
-      <!-- 3. KemProMed-Flow (LINK FUNCIONAL DIRECTO) -->
+      <!-- 3. K-Pro-Educación (LINK FUNCIONAL DIRECTO) -->
       <div class="card">
         <div>
-          <div class="card-icon">⚙️</div>
-          <h3>KemProMed-Flow</h3>
-          <p>Orquestador de procesos e integración industrial B2B para diagnóstico de flujos, detección de cuellos de botella y automatización.</p>
+          <span class="badge">EdTech / AI Studio</span>
+          <h3>3. K-Pro-Educación</h3>
+          <p>Tutor interactivo para clases gratuitas de idiomas dirigidas a estudiantes. Generación en tiempo real de lecciones, ejercicios prácticos y evaluación continua adaptativa.</p>
         </div>
-        <a href="https://ai.studio/apps/b0d5223e-79c2-4a6a-b7ac-3debb048d9c2" target="_blank" rel="noopener noreferrer" class="btn">Abrir KemProMed-Flow ↗</a>
+        <a href="https://ai.studio/apps/0c6b80f6-0f6e-491a-bf8f-4f1db316e016" target="_blank" rel="noopener noreferrer" class="btn-link">Abrir K-Pro Educación ↗</a>
       </div>
 
-      <!-- 4. Motor K-AURA Web3 -->
+      <!-- 4. KemProMed-Flow (LINK FUNCIONAL DIRECTO) -->
       <div class="card">
         <div>
-          <div class="card-icon">🔗</div>
-          <h3>Motor K-AURA Web3</h3>
-          <p>Verificación criptográfica de licencias profesionales, autenticidad de expedientes e interoperabilidad descentralizada en Polygon Network.</p>
+          <span class="badge">B2B Industry / AI Studio</span>
+          <h3>4. KemProMed-Flow</h3>
+          <p>Orquestador industrial para diagnóstico de procesos, optimización de flujos operativos B2B, reducción de cuellos de botella y simulación de entropía en sistemas complejas.</p>
         </div>
-        <a href="https://kempromed.com" class="btn btn-outline">Verificar en Registro</a>
+        <a href="https://ai.studio/apps/b0d5223e-79c2-4a6a-b7ac-3debb048d9c2" target="_blank" rel="noopener noreferrer" class="btn-link">Abrir KemProMed-Flow ↗</a>
       </div>
 
-      <!-- 5. Módulo de Cobros Clip -->
+      <!-- 5. Red de Servicios Médicos -->
       <div class="card">
         <div>
-          <div class="card-icon">💳</div>
-          <h3>Pasarela B2B Clip</h3>
-          <p>Procesamiento seguro de liquidaciones, cobranza SaaS y pagos digitales instantáneos mediante tarjetas bancarias y SPEI.</p>
+          <span class="badge">Agendas & Pagos Clip</span>
+          <h3>5. Red de Servicios & Cobros</h3>
+          <p>Plataforma global para consultas en línea, agendas independientes sincronizadas con Google Calendar API e integración con pasarela Clip para pagos instantáneos.</p>
         </div>
-        <a href="https://kempromed.com" class="btn btn-outline">Procesar Liquidación</a>
-      </div>
-
-      <!-- 6. Google Calendar API -->
-      <div class="card">
-        <div>
-          <div class="card-icon">📅</div>
-          <h3>Agenda Institucional</h3>
-          <p>Sincronización de consultas médicas, citas y eventos profesionales integrada con Google Calendar API.</p>
-        </div>
-        <a href="mailto:direccion@kempromed.com?subject=Agendar%20Cita%20Institucional" class="btn btn-outline">Agendar en Calendar</a>
+        <a href="mailto:direccion@kempromed.com?subject=Agendar%20Servicio" class="btn-link">Gestión de Citas ↗</a>
       </div>
     </div>
   </main>
 
-  <!-- PIE DE PÁGINA CORPORATIVO -->
+  <!-- PIE DE PÁGINA CON PROPIEDAD INTELECTUAL -->
   <footer>
-    <p><strong>KemPro Digital Solutions © 2026</strong> | Todos los derechos reservados.</p>
-    <p>Portal Oficial: <a href="https://kempromed.com">kempromed.com</a> | Contacto: <a href="mailto:direccion@kempromed.com">direccion@kempromed.com</a></p>
-    <p style="margin-top: 8px; font-size: 11px; color: #64748B;">Alineado con las Normas Oficiales Mexicanas NOM-004-SSA3-2012, NOM-024-SSA3-2012 y LFPDPPP</p>
+    <div class="presence">
+      <p style="font-size: 11px; color: var(--cyan); font-family: monospace; margin-bottom: 6px;">PRESENCIA Y ÁREA DE INFLUENCIA</p>
+      <span>San Luis Río Colorado • Veracruz • Quintana Roo • Tlalnepantla</span>
+    </div>
+
+    <div class="legal-owner">
+      <p>© 2026 KemProMed. Todos los derechos reservados.</p>
+      <p>Titular de Derechos y Propiedad Intelectual: <strong>Dr. Mauro Ernesto Falcón Muñoz</strong></p>
+      <p style="margin-top: 8px;"><a href="https://kempromed.com">kempromed.com</a> • Central Hub</p>
+    </div>
   </footer>
 
 </body>
