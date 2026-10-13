@@ -11,6 +11,8 @@
       --border-color: #1E293B;
       --cyan-accent: #00D4B2;
       --blue-button: #0052FF;
+      --green-wa: #25D366;
+      --pink-clip: #FF0055;
       --text-white: #FFFFFF;
       --text-gray: #94A3B8;
     }
@@ -30,12 +32,14 @@
     
     .badge-core { background: rgba(0, 212, 178, 0.1); color: var(--cyan-accent); font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(0, 212, 178, 0.3); }
     .badge-blue { background: rgba(0, 82, 255, 0.15); color: #60A5FA; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
+    .badge-green { background: rgba(37, 211, 102, 0.15); color: #25D366; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
     
     .card-desc { font-size: 12px; color: var(--text-gray); margin-bottom: 15px; }
 
     .btn-action { display: block; width: 100%; text-align: center; background-color: var(--blue-button); color: #FFF; font-weight: 700; font-size: 13px; padding: 12px; border-radius: 8px; text-decoration: none; border: none; }
     .btn-action-outline { display: block; width: 100%; text-align: center; background: transparent; color: #FFF; font-weight: 700; font-size: 13px; padding: 12px; border-radius: 8px; text-decoration: none; border: 1px solid var(--border-color); }
-    .btn-clip { background-color: #FF0055; color: #FFF; }
+    .btn-clip { background-color: var(--pink-clip); color: #FFF; }
+    .btn-wa { background-color: var(--green-wa); color: #000; }
 
     footer { text-align: center; font-size: 11px; color: var(--text-gray); margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; }
   </style>
@@ -59,17 +63,17 @@
     <a href="https://k-aura-ser.onrender.com" target="_blank" class="btn-action-outline">Acceder al Motor (K-AURA) →</a>
   </div>
 
-  <!-- 2. KEMPROMED NEXUS -->
+  <!-- 2. KEMPROMED NEXUS / MEDIPULSE (REDIRECCIÓN DIRECTA A LA APP) -->
   <div class="card">
     <div class="card-title-row">
       <span class="card-title">KemProMed Nexus</span>
       <span class="badge-blue">Clinical Node</span>
     </div>
     <p class="card-desc">Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.</p>
-    <a href="mailto:direccion@kempromed.com?subject=Acceso%20Nexus" class="btn-action">Acceder a Nexus (MediPulse AI) →</a>
+    <a href="https://ai.studio/apps/30730cc" target="_blank" class="btn-action">Acceder a Nexus (MediPulse AI) →</a>
   </div>
 
-  <!-- 3. K-PRO-EDUCACIÓN (NUEVO MÓDULO AGREGADO) -->
+  <!-- 3. K-PRO-EDUCACIÓN (MÓDULO DE IDIOMAS GRACIOSO / GRATUITO) -->
   <div class="card">
     <div class="card-title-row">
       <span class="card-title">K-Pro-Educación</span>
@@ -79,7 +83,7 @@
     <a href="https://ai.studio/apps/0c6b80f6-0f6e-491a-bf8f-4f1db316e016" target="_blank" class="btn-action-outline">Abrir K-Pro Educación ↗</a>
   </div>
 
-  <!-- 4. KEMPROMED-FLOW (NUEVO MÓDULO AGREGADO) -->
+  <!-- 4. KEMPROMED-FLOW (MÓDULO B2B INDUSTRIAL) -->
   <div class="card">
     <div class="card-title-row">
       <span class="card-title">KemProMed-Flow</span>
@@ -89,21 +93,32 @@
     <a href="https://ai.studio/apps/b0d5223e-79c2-4a6a-b7ac-3debb048d9c2" target="_blank" class="btn-action-outline">Abrir KemProMed-Flow ↗</a>
   </div>
 
-  <div class="section-header">💳 Pasarelas de Pago y Servicios Empresariales</div>
+  <div class="section-header">💳 Pasarelas de Pago, Libros y Contacto Directo</div>
 
-  <!-- 5. PAGOS CLIP -->
+  <!-- 5. PAGOS CLIP Y CATÁLOGO DE LIBROS / E-BOOKS -->
   <div class="card">
     <div class="card-title-row">
-      <span class="card-title">Pagos con Tarjeta (Clip)</span>
+      <span class="card-title">Pagos & E-Books (Clip)</span>
       <span class="badge-blue" style="background: rgba(255,0,85,0.2); color: #FF0055;">Clip MX</span>
     </div>
-    <p class="card-desc">Procesa pagos seguros en moneda nacional para E-books, consultoría empresarial, licencias K-Aura y servicios KemPro Digital Solutions.</p>
-    <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" class="btn-action btn-clip">Ir al Catálogo de Pagos Clip →</a>
+    <p class="card-desc">Procesa pagos seguros en moneda nacional para E-books, consultoría empresarial, licencias K-Aura y catálogo de infoproductos.</p>
+    <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" class="btn-action btn-clip">Ir al Catálogo de Pagos & Libros Clip →</a>
+  </div>
+
+  <!-- 6. AGENDA DIRECTA Y CONTACTO WHATSAPP -->
+  <div class="card">
+    <div class="card-title-row">
+      <span class="card-title">Atención & Agenda Directa</span>
+      <span class="badge-green">WhatsApp Direct</span>
+    </div>
+    <p class="card-desc">Canal directo para agendamiento institucional, consultas corporativas y soporte B2B con la Dirección General.</p>
+    <a href="https://wa.me/526531151600?text=Hola,%20solicito%20atenci%C3%B3n%20institucional%20en%20KemProMed" target="_blank" class="btn-action btn-wa">Contactar por WhatsApp Directo →</a>
   </div>
 
   <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2026 KemPro Digital Solutions / KemProMed. Todos los derechos reservados.</p>
+    <p style="margin-top: 4px; font-size: 10px;">Titular de Derechos e Infraestructura: Dr. Mauro Ernesto Falcón Muñoz</p>
   </footer>
 
 </body>
